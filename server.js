@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, './Mern-portfolio/dist')))
 
 //routes
-app.use("/api/v1/portfolio", require("./Routes/portfolioRoute"));
+app.use("http://localhost:8080/api/v1/portfolio", require("./Routes/portfolioRoute"));
 
 app.get('/{*any}',function(req,res){
   res.sendFile(path.join(__dirname, './Mern-portfolio/dist/index.html'))
